@@ -1,0 +1,19 @@
+{
+  "name": "p3_moly_camille",
+  "version": "1.0.0",
+  "description": "Projet 3 - Ohmyfood!",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camillemoly/CamilleMoly_3_02112020.git"
+  },
+  "author": "Camille Moly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camillemoly/CamilleMoly_3_02112020/issues"
+  },
+  "homepage": "https://github.com/camillemoly/CamilleMoly_3_02112020#readme"
+}
