@@ -1,1 +1,33 @@
-// Homepage du package.json à modifier !!
+@import "./base/base";
+@import "./base/typography";
+@import "./components/buttons";
+@import "./components/flex";
+@import "./layout/header";
+@import "./utils/variables";
+
+// ************************************************************* INDEX *********************************************************** //
+// LOCATION
+.location{
+    height: 40px;
+    background-color: $background-medium;
+    color: $background-dark;
+    &__text{
+        margin-left: 20px;
+        font-weight: 500;
+    }
+}
+
+// PRESENTATION
+.presentation{
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+    background-color: $background-light;
+    &__title{
+        margin: 0 40px;
+    }
+    &__subtitle{
+        font-size: 1.15rem;
+        font-weight: 300;
+    }
+}

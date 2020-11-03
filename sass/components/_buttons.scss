@@ -1,0 +1,15 @@
+@import "../utils/variables";
+
+.button{
+    height: 50px;
+    width: 220px;
+    border-radius: 30px;
+    background-color: $color-primary;
+    box-shadow: 0 105px 40px -80px $color-secondary inset;
+    //Put a box-shadow ahead the background-color to make a gradient beacause in CSS, transition doesn't work on linear-gradient.
+    color: white;
+    &:hover, &:active{
+        box-shadow: 0 130px 40px -80px $color-secondary inset;
+        transition: box-shadow 300ms;
+    }
+}
