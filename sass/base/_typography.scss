@@ -5,8 +5,9 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
-.header__logo{
+.load-page__logo, .header__logo, .footer__logo{
     font-family: "Shrikhand", sans-serif;
+    font-weight: normal;
 }
 
 a{
@@ -16,6 +17,11 @@ a{
 
 h1{
     font-weight: 700;
+}
+
+h3{
+    margin: 0;
+    font-weight: 800;
 }
 
 p{

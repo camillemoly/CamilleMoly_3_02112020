@@ -1,0 +1,43 @@
+@import "../utils/variables";
+
+@keyframes logo-beats {
+    0%{
+        transform: scale(1);
+    }
+    30% {
+      transform: scale(1.15);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes load-page_slide {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100vh);
+    }
+}
+
+.load-page{
+    position: absolute;
+    z-index: 2;
+    // to be placed ahead of the page
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    // to contain the all screen whatever the device
+    background: linear-gradient($color-primary, $color-secondary);
+    animation: load-page_slide 1500ms 4500ms forwards;
+    // duration 1500ms, delay 4500ms (atfer logo-beats), forwards = keep the final state
+    &__logo{
+        color: white;
+        font-size: 15vw;
+        animation: logo-beats 1500ms 3;
+        // duration 1500ms, 3 counts
+    }
+}

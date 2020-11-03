@@ -1,8 +1,9 @@
-.header, .location, .presentation, .button{
+.header, .location, .presentation, .button, .button__background, .operation__section, .operation__list, .restaurants__list,
+.restaurants__card__description, .restaurants__card__description div, .footer__list, .footer__section{
     display: flex;
 }
 
-.header, .location, .presentation, .button{
+.header, .location, .presentation, .button, .button__background, .operation__list{
     justify-content: center;
     align-items: center;
 }

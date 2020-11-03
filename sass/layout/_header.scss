@@ -1,11 +1,11 @@
 @import "../utils/variables";
 
 .header{
-    z-index: 1;
-    margin: 0;
-    height: 55px;
-    box-shadow: 0px 0px 5px 1px $box-shadow-color;
+    z-index: 1; //to place the box shadow over the location div
+    height: 62px;
+    width: 100%;
+    box-shadow: 0px 0px 5px 1px $header-box-shadow;
     &__logo{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }

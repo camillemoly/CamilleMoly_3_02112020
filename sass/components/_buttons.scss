@@ -4,12 +4,26 @@
     height: 50px;
     width: 220px;
     border-radius: 30px;
-    background-color: $color-primary;
-    box-shadow: 0 105px 40px -80px $color-secondary inset;
-    //Put a box-shadow ahead the background-color to make a gradient beacause in CSS, transition doesn't work on linear-gradient.
-    color: white;
-    &:hover, &:active{
-        box-shadow: 0 130px 40px -80px $color-secondary inset;
-        transition: box-shadow 300ms;
+    box-shadow: 0 4px 6px 2px #bcbcbc;
+    background-image: linear-gradient($color-secondary, $color-primary);
+    &__background{
+        height: 100%;
+        width: 100%;
+        border-radius: inherit; //take the value of element's parent
+        color: white;
+    }
+    &:hover &__background, &:active &__background{
+        background-color: $color-secondary; // to change the background of the button because linear-gradient can't have a transition
+        box-shadow: 0 4px 10px 2px #bcbcbc;
+        transition: all 300ms;
+    }
+}
+
+.like{
+    font-size: 1.5rem;
+    color: $background-medium;
+    &:hover, &:after{
+        color: $color-primary;
+        transition: color 400ms ease-in-out;
     }
 }
