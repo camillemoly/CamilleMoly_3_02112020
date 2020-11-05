@@ -5,7 +5,7 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
-.load-page__logo, .header__logo, .footer__logo{
+.load-page__logo, .header__logo, .footer__logo, .menu__title{
     font-family: "Shrikhand", sans-serif;
     font-weight: normal;
 }
@@ -17,6 +17,11 @@ a{
 
 h1{
     font-weight: 700;
+}
+
+h2{
+    font-size: 1.15rem;
+    font-weight: 300;
 }
 
 h3{

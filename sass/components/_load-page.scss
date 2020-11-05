@@ -22,22 +22,23 @@
 }
 
 .load-page{
+    visibility: hidden;
     position: absolute;
-    z-index: 2;
-    // to be placed ahead of the page
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    // to be placed ahead of the page
     height: 100vh;
     width: 100vw;
     // to contain the all screen whatever the device
     background: linear-gradient($color-primary, $color-secondary);
-    animation: load-page_slide 1500ms 4500ms forwards;
-    // duration 1500ms, delay 4500ms (atfer logo-beats), forwards = keep the final state
+    animation: load-page_slide 1500ms 5000ms forwards;
+    // duration 1500ms, delay 5000ms (atfer logo-beats), forwards = keep the final state
     &__logo{
         color: white;
         font-size: 15vw;
-        animation: logo-beats 1500ms 3;
-        // duration 1500ms, 3 counts
+        animation: logo-beats 1500ms 500ms 3;
+        // duration 1500ms, delay 500ms, 3 counts
     }
 }
