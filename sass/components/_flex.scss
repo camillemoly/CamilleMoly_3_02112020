@@ -1,8 +1,9 @@
-.header, .location, .presentation, .button, .button__background, .operation__section, .operation__list, .restaurants__list,
-.restaurants__card__description, .restaurants__card__description div, .footer__list, .footer__section, .menu__list{
+.header, .location, .presentation, .button, .button__background, .operation__section, .operation__list, 
+.restaurants__card__description, .restaurants__card__description div, .footer__list, .footer__section,
+.menu-card, .menu-card__description, .menu-card__description__subtitleAndPrice, .menu-card__check{
     display: flex;
 }
-.header, .location, .presentation, .button, .button__background, .operation__list{
+.header, .location, .presentation, .button, .button__background, .operation__list, .menu-card__check{
     justify-content: center;
     align-items: center;
 }

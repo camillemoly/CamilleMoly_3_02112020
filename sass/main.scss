@@ -3,9 +3,10 @@
 @import "./components/buttons";
 @import "./components/flex";
 @import "./components/load-page";
-@import "./components/effects";
+@import "./components/menu-effect";
 @import "./layout/header";
 @import "./layout/footer";
+@import "./utils/breakpoints";
 @import "./utils/variables";
 
 // ********************************************************* INDEX ************************************************************//
@@ -13,7 +14,7 @@
 // LOCATION
 .location{
     height: 50px;
-    box-shadow: 0px 8px 4px -6px $location-box-shadow inset;
+    box-shadow: 0px 8px 4px -6px $location-box-shadow inset; // bow shadow between location and header
     background-color: $background-medium;
     &__text{
         margin-left: 20px;
@@ -29,6 +30,9 @@
     background-color: $background-light;
     &__title{
         margin: 0 40px;
+    }
+    &__subtitle{
+        font-size: 1.15rem;
     }
     &__button{
         margin-top: 15px;
@@ -64,10 +68,10 @@
         }
         &__icon{
             margin-left: 35px;
+            width: 30px;
             color: grey;
         }
         &__text{
-            margin-left: 25px;
             font-weight: 500;
         }
         &:hover, &:active{
@@ -82,10 +86,7 @@
 }
 /* Icons */ // Resize the icons
 .fa-mobile-alt{
-    font-size: 1.3rem;
-}
-.fa-list-ul{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 .fa-store{
     font-size: 0.9rem;
@@ -100,14 +101,10 @@
         height: 100%;
         width: 100%;
     }
-    &__list{
-        flex-direction: column;
-        align-items: center; // keep the cards center whatever the device width
-    }
     &__like-button{
         position: absolute;
         right: 30px;
-        bottom: 30px;
+        bottom: 25px;
     }
     &__card{
         position: relative; // to set the heart icon to absolute and place it where we want
@@ -157,7 +154,7 @@
 // BANNER
 .banner{
     position: absolute;
-    z-index: -1;
+    z-index: -1; // to place the banner under the menu
     height: 300px;
     &__photo{
         width: 100%;
@@ -170,17 +167,16 @@
 .menu{
     position: relative; // to place the like icon where we want
     margin-top: 230px; // to make a space between the menu & the header to see the banner
-    padding: 5px 0 40px 0;
+    padding: 5px 5px 40px 5px;
     border-radius: 40px;
     background-color: $background-light;
     &__title{
         margin: 25px 0 15px 20px;
-        font-size: 2rem;
     }
     &__like-button{
         position: absolute;
-        top: 40px;
-        right: 40px;
+        top: 32px;
+        right: 30px;
     }
     &__category-title{
         margin-left: 5px;
@@ -195,7 +191,6 @@
         }
     }
     &__list{
-        flex-direction: column;
         padding: 0 10px;
     }
     &__button{
@@ -203,26 +198,20 @@
     }
 
 .menu-card{
-        display: flex; // to have the description & the check box on the same line
-        justify-content: center;
+        justify-content: center; 
         height: 70px;
-        width: 100%;
+        width: 0%;
         margin-bottom: 15px;
         overflow: hidden; // to hide check box overflow when it's reduce
         border-radius: 20px;
         box-shadow: 0 8px 10px 0 $cards-box-shadow;
         background-color: white;
         &__description{
-            display: flex; // to center the description text in the div
             flex-direction: column;
             justify-content: center;
             width: 100%;
-            height: 100%;
             margin-left: 10px;
             transition: width 1000ms; // to do transition when it gets bigger
-            &__subtitleAndPrice{
-                display: flex;
-            }
             &__title, &__subtitle{
                 width: 90%;
                 overflow: hidden;
@@ -235,10 +224,6 @@
             }
         }
         &__check{
-            display: flex; // to center the icon check
-            justify-content: center;
-            align-items: center;
-            height: 100%;
             width: 0%;
             overflow: hidden; // to hide the check icon when the check box is reduce
             border-radius: 0 20px 20px 0;
@@ -247,16 +232,16 @@
             background-color: $color-tertiary;
             transition: all 1000ms; // to do transition when it gets smaller
         }
-        &:hover > .menu-card__description, &:active > .menu-card__description{
-            width: 80%;
+        &:hover > .menu-card__description{
+            width: 80%; // gets description smaller
             transition: all 500ms;
         }
-        &:hover > .menu-card__check, &:active > .menu-card__check{
-            width: 20%;
+        &:hover > .menu-card__check{
+            width: 20%; // gets check box bigger
             transition: all 500ms;
         }
-        &:hover .menu-card__check i, &:active .menu-card__check i{
-            transform: rotate(360deg);
+        &:hover .menu-card__check i{
+            transform: rotate(360deg); // rotate the icon check
             transition: all 500ms;
         }
     }

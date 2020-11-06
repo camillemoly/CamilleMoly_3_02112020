@@ -1,0 +1,95 @@
+// Mobile S --> adapt titles sizes to smalls devices
+@media (max-width: 319px) {
+    .presentation__title{
+        font-size: 1.4rem;
+    }
+    .restaurants__card__description--title{
+        font-size: 0.9rem;
+    }
+    .menu{
+        &__title{
+        font-size: 1.2rem;
+        }
+        &__like-button{
+            top: 20px;
+        }
+    }
+    .menu-card__description{
+        &__title{
+            font-size: 0.8rem;
+        }
+        &__subtitleAndPrice{
+            font-size: 0.7rem;
+        }
+    }
+}
+
+// Mobile M --> adapt titles sizes
+@media (min-width: 320px) and (max-width: 374px) {
+    .menu__title{
+        font-size: 1.4rem;
+    }
+    .menu-card__description{
+        &__title{
+            font-size: 0.9rem;
+        }
+        &__subtitleAndPrice{
+            font-size: 0.8rem;
+        }
+    }
+}
+
+// Mobile L --> adapt titles sizes
+@media (min-width: 375px) and (max-width: 424px) {
+    .menu-card__description{
+        &__title{
+            font-size: 1rem;
+        }
+        &__subtitleAndPrice{
+            font-size: 0.9rem;
+        }
+    }
+}
+
+// Tablet landscape & bigger
+@media (min-width: 768px) {
+    .operation, .menu__list{
+        width: 70%; // to center them
+        margin: 0 auto;
+    }
+    .restaurants__list{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        & > *{
+            width: 45%; // to place 2 cards per line
+        }
+    }
+}
+
+// Reduce text of laptop's menu-card description
+@media (min-width: 1024px) and (max-width: 1300px) {
+    .menu-card__description{
+        &__title{
+            font-size: 1rem;
+        }
+        &__subtitleAndPrice{
+            font-size: 0.8rem;
+        }
+    }
+}
+
+// Laptop et desktop
+@media (min-width: 1024px) {
+    .menu__list{
+        display: flex;
+        justify-content: space-around;
+        width: 95%;
+        & > *{
+            width: 30%; // to place all menu sections on a row
+        }
+    }
+    .restaurants__list > *{
+        width: 24%; // to place 4 cards per line
+    }
+}

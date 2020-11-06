@@ -7,7 +7,7 @@
     box-shadow: 0 4px 6px 2px $button-box-shadow;
     color: white;
     background: linear-gradient($color-secondary, $color-primary);
-    &:hover, &:active{
+    &:hover{
         background: linear-gradient($color-secondary, 80%, $color-primary);
         box-shadow: 0 4px 6px 6px $button-box-shadow;
     }
@@ -15,14 +15,15 @@
 
 .like-button{
     font-size: 1.5rem;
-    overflow: hidden;
     &--full{
-        position: absolute;
+        position: absolute; // to place the 2 heart icons on top of each other
         height: 0%;
         background-image: linear-gradient($color-primary, $color-secondary);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+        // background is limited by the edges of the icon
+        transition: height 1000ms;
     }
     &--empty{
         position: absolute;
@@ -32,11 +33,11 @@
         position: relative;
         height: 25px;
         width: 25px;
-        &:hover > .like-button--full, &:active .like-button--full{
-            height: 100%;
+        &:hover > .like-button--full{
+            height: 100%; // to fill the heart gradually
             transition: height 1000ms;
         }
-        &:hover > .like-button--empty, &:active .like-button--empty{
+        &:hover > .like-button--empty{
             background-image: linear-gradient($color-primary, $color-secondary);
             background-clip: text;
             -webkit-background-clip: text;
