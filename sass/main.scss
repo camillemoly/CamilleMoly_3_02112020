@@ -75,11 +75,11 @@
         &__text{
             font-weight: 500;
         }
-        &:hover, &:active{
+        &:hover{
             background-color: lighten($color-primary, 35%);
             transition: background-color 300ms;
         }
-        &:hover > i, &:active > i{
+        &:hover > i{
             color: $color-primary;
             transition: color 300ms;
         }
@@ -234,15 +234,15 @@
             background-color: $color-tertiary;
             transition: all 1000ms; // to do transition when it gets smaller
         }
-        &:hover > .menu-card__description, &:active > .menu-card__description{
+        &:hover > .menu-card__description{
             width: 80%; // gets description smaller
             transition: all 500ms;
         }
-        &:hover > .menu-card__check, &:active > .menu-card__check{
+        &:hover > .menu-card__check{
             width: 20%; // gets check box bigger
             transition: all 500ms;
         }
-        &:hover .menu-card__check i, &:active .menu-card__check i{
+        &:hover .menu-card__check i{
             transform: rotate(360deg); // rotate the icon check
             transition: all 500ms;
         }
