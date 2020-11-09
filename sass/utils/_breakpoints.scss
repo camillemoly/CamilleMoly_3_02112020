@@ -67,8 +67,8 @@
     }
 }
 
-// Reduce text of laptop's menu-card description
-@media (min-width: 1024px) and (max-width: 1300px) {
+// Reduce menu-card description's text on small laptops
+@media (min-width: 1024px) and (max-width: 1299px) {
     .menu-card__description{
         &__title{
             font-size: 1rem;
@@ -86,7 +86,7 @@
         justify-content: space-around;
         width: 95%;
         & > *{
-            width: 30%; // to place all menu sections on a row
+            width: 31%; // to place all menu sections on a row
         }
     }
     .restaurants__list > *{
