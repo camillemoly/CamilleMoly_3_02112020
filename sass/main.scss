@@ -57,6 +57,7 @@
         border-radius: 20px;
         box-shadow: 0 8px 10px 0 $cards-box-shadow;
         background-color: $background-light;
+        cursor: pointer;
         &__number{
             position: absolute; //to place the number where we want on the div
             left: -10px;
@@ -206,6 +207,7 @@
         border-radius: 20px;
         box-shadow: 0 8px 10px 0 $cards-box-shadow;
         background-color: white;
+        cursor: pointer;
         &__description{
             flex-direction: column;
             justify-content: center;
@@ -232,15 +234,15 @@
             background-color: $color-tertiary;
             transition: all 1000ms; // to do transition when it gets smaller
         }
-        &:hover > .menu-card__description{
+        &:hover > .menu-card__description, &:active > .menu-card__description{
             width: 80%; // gets description smaller
             transition: all 500ms;
         }
-        &:hover > .menu-card__check{
+        &:hover > .menu-card__check, &:active > .menu-card__check{
             width: 20%; // gets check box bigger
             transition: all 500ms;
         }
-        &:hover .menu-card__check i{
+        &:hover .menu-card__check i, &:active .menu-card__check i{
             transform: rotate(360deg); // rotate the icon check
             transition: all 500ms;
         }
