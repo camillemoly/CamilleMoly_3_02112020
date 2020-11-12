@@ -15,6 +15,7 @@
 
 .like-button{
     font-size: 1.5rem;
+    cursor: pointer;
     &--full{
         position: absolute; // to place the 2 heart icons on top of each other
         height: 0%;

@@ -13,7 +13,7 @@
         // delay = 400ms * number of starter child so it allows to start in cascade
     }
     .main__card:nth-child(#{$i}){
-        animation: card-slide 1500ms 400ms*$i+1200ms forwards
+        animation: card-slide 1500ms 400ms*$i+1200ms forwards;
         // start 1200ms after the last starter__div
     }
     .dessert__card:nth-child(#{$i}){
