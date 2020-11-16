@@ -76,10 +76,10 @@
             font-weight: 500;
         }
         &:hover{
-            background-color: lighten($color-primary, 35%);
+            background-color: lighten($color-primary, 30%);
             transition: background-color 300ms;
         }
-        &:hover > i{
+        &:hover i{
             color: $color-primary;
             transition: color 300ms;
         }
