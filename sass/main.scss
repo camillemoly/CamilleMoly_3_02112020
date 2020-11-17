@@ -30,9 +30,11 @@
     background-color: $background-light;
     &__title{
         margin: 0 40px;
+        font-weight: 800;
     }
     &__subtitle{
         font-size: 1.15rem;
+        font-weight: 300;
     }
     &__button{
         margin-top: 15px;
@@ -41,18 +43,19 @@
 
 // OPERATION
 .operation{
-    padding: 30px 10px;
+    padding: 30px 20px;
     &__list{
         flex-direction: column;
     }
     &__title{
-        margin-bottom: 30px;
+        margin: 0 0 30px 8px;
+        font-weight: 800;
     }
     &__section{
         position: relative;
         align-items: center;
         height: 75px;
-        width: 98%;
+        width: 100%;
         margin-bottom: 25px;
         border-radius: 20px;
         box-shadow: 0 8px 10px 0 $cards-box-shadow;
@@ -97,6 +100,9 @@
 .restaurants{
     padding: 30px 20px 45px 20px;
     background-color: $background-light;
+    &__title{
+        font-weight: 800;
+    }
     & a{ // extend the link throughout the div
         display: block;
         height: 100%;
@@ -184,6 +190,7 @@
         margin-left: 5px;
         margin-bottom: 5px;
         font-size: 1rem;
+        font-weight: 300;
         &--underline{
             height: 3px;
             width: 40px;
